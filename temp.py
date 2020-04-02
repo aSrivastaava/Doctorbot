@@ -21,13 +21,11 @@ nltk.download('wordnet', quiet=True)
 
 # Read corpus text file 
 f=open('corpus.txt','r',errors = 'ignore')
-raw=f.read()
+raw = f.read()
 # print(raw)
 
 
-raw_ = raw.lower()
-# print(raw_)
-text = raw_
+text = raw
 
 # converts to list of sentences 
 sent_tokens = nltk.sent_tokenize(text)
@@ -47,8 +45,8 @@ def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 # Greetings based on keywords
-GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
-GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me"]
+GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up", "hey")
+GREETING_RESPONSES = ["Hi", "Hey", "*nods*", "Hi, there", "Hello", "I am glad! You are talking to me"]
 def greeting(sentence):
  
     for word in sentence.split():
@@ -92,6 +90,11 @@ def audio_output(texto):
 # Main conditons and loop for bot   
 flag=True
 print("Doctorbot: My name is Doctorbot. I'm an informative Chatbot for Coronavirus. If you want to exit, type 'exit'")
+
+tts = gTTS('Bye! take care stay home stay safe')
+tts.save('audio.mp3')
+winsound.PlaySound('audio.mp3', winsound.SND_FILENAME)
+
 while(flag==True):
     print("User:")
     user_response = input()
@@ -115,7 +118,7 @@ while(flag==True):
 
             else:
                 
-                print("Doctorbot: ",end="")
+                print("Doctorbot: ", end="")
 
                 bot_response = response(user_response)
                 print(bot_response)
@@ -130,8 +133,7 @@ while(flag==True):
         print("Doctorbot: Bye! take care stay home stay safe")
 
 
-        tts = gTTS('Bye! take care stay home stay safe')
+        tts = gTTS('Bye! take care stay home, stay safe')
         tts.save('audio.mp3')
+        winsound.PlaySound('audio.mp3', winsound.SND_FILENAME)
         seperation()
-
-
