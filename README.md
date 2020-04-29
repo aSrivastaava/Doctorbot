@@ -13,6 +13,12 @@ NLTK - Natural Language Toolkit
 pip install nltk
 ```
 
+sklearn
+
+```
+pip install sklearn
+```
+
 gTTS - Text to speech
 
 ```
@@ -26,7 +32,6 @@ pip install winsound
 ```
 
 PyQt5 - User Interface
-
 ```
 pip install PyQt5
 ```
