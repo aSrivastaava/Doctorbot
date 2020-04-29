@@ -25,6 +25,12 @@ winsound - Playing sound in Windows
 pip install winsound
 ```
 
+PyQt5 - User Interface
+
+```
+pip install PyQt5
+```
+
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
@@ -70,4 +76,4 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Python](https://docs.python.org/3/) - 
-* [PyQt](https://pythonbasics.org/pyqt/) - User Interface
+* [PyQt](https://pypi.org/project/PyQt5/) - User Interface
